@@ -1,4 +1,4 @@
-# Calculator
+# Calculator計算機
 
 swift 3
 

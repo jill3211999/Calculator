@@ -12,7 +12,7 @@ class CalculatorBrain{
     
     private var accumulator = 0.0
     
-    func  setOperand(operand: Double){
+    func setOperand(operand: Double){
         accumulator = operand
     }
     
@@ -37,6 +37,7 @@ class CalculatorBrain{
     
     func performOperation(symbol: String){
         if let operation = operations[symbol]{
+            print("operation = ", operation)
             switch operation {
             case .Constant(let value): accumulator = value
             case .UnaryOperation(let function): accumulator = function(accumulator)
@@ -48,6 +49,7 @@ class CalculatorBrain{
     
     var result: Double{
         get{
+            print("accumulator = ", accumulator)
             return accumulator
         }
     }
